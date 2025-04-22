@@ -36,13 +36,14 @@ This tool evaluates RtM requirements for:
 
 ---
 
-## 🛠️ How to Use
+## 🧾 Summary: RtM Methods – Who Uses What and Why
 
-1. Clone or download this repository.
-2. Open `rtm_calculation.py` in your IDE or Jupyter.
-3. Run the script to:
-   - Generate capital requirements under each method
-   - View summary tables and charts
+| **Method**                                             | **Who Uses It**                                     | **How It Works**                                                                 | **Why It's Used**                                                                           
+|------------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------------------------------
+| 🟩 **Standardised Approach (SA)**                     | **All IFR investment firms**                        | Fixed **risk weights** based on asset class (e.g., 8% for equities)               | ✅ Simple, prescriptive, ensures **minimum capital** without needing complex models      |
+| 🟦 **Alternative Standardised (ASA)**<br>*(FRTB-SA)*  | **CRR investment firms** *(large banks, systemic)*   | Based on **sensitivities** (Delta, Vega, Curvature) with **stress-based shocks**  | 🧠 More **risk-sensitive**, but still conservative. Useful for comparability across firms     |
+| 🟪 **Internal Model Approach (IMA)**<br>*(FRTB-IMA)* | **Approved CRR banks** *(with regulatory permission)*| Simulates **10-day Expected Shortfall** using historical or Monte Carlo data      | 🎯 Reflects **true risk**, allows for **capital optimisation** if backtesting and models are solid |
+
 
 ---
 
@@ -52,6 +53,7 @@ This tool evaluates RtM requirements for:
 |----------------------|------------------------------- |-------------------------------|
 | Equity Call Option   | €59,539.99                     | €89,309.99                    |
 | Total Portfolio      | €982,283.43                    | €1,473,425.15                 |
+
 
 ---
 
